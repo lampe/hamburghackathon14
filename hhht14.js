@@ -23,7 +23,7 @@ if (Meteor.isClient) {
   Meteor.startup(function() {
     if (Antworten.find().count() === 0) {
       $.each(Questions, function(key, value){
-          Antworten.insert({"question":Questions[key]});
+          Antworten.insert({"question":Questions[key],"ja": 0, "nein": 0});
       });
      };
   });
