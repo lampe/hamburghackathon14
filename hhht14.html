@@ -1,0 +1,83 @@
+<head>
+  <title>hhht14</title>
+</head>
+
+<body>
+	{{> layout}}
+</body>
+<template name="layout">
+	{{> temp}}
+</template>
+
+<template name="header">
+	<div class="ui page centerText">
+		<div class="column">Quest.li</div>
+	</div>
+</template>
+
+<template name='welcome'>
+	{{> header}}
+	<div class="ui form">
+  		<div class="field paci bigger">
+    		<label>Dein Name</label>
+    		<input class="nameText" type="text">
+		</div>
+	</div>
+	<div class="ui three column page grid">
+  		<div class="column"></div>
+  		<div class="column">
+  			{{> firstWeiter}}
+		</div>
+    	<div class="column"></div>
+	</div>
+</template>
+
+<template name='questions'>
+	{{> header}}
+	<div class="ui page grid questions">
+		<div class="column centerThat"><span class="twoEm">{{benutzer}} {{question}}</span></div>	
+	</div>
+	{{> buttons}}
+</template>
+<template name="buttons">
+	<div class="ui two column page grid">
+		<div class="column myButton"><a href="#" class="ja">Ja</a></div>
+		<div class="column myButton"><a href="#" class="nein">Nein</a></div>
+	</div>
+</template>
+<template name="firstWeiter">
+	<div class="ui button centerThat">
+  			Weiter
+	</div>
+</template>
+
+<template name="danke">
+	<div class="ui page centerText">
+		<div class="column">Danke!</div>
+	</div>
+</template>
+
+<template name="stati">
+<div class="stati ui page column">
+	{{#each antworten}}
+		<div> {{question}}</div>
+		<div> ja:{{ja}}</div>
+		<div> nein:{{nein}}</div>
+		<canvas id="{{_id}}" width="400" height="400"></canvas>
+		<script type="text/javascript">
+			var ctx = $("#{{_id}}").get(0).getContext("2d");
+			var data = [
+	{
+		value: {{ja}},
+		color:"#F38630"
+	},
+	{
+		value : {{nein}},
+		color : "#E0E4CC"
+	}			
+]
+			new Chart(ctx).Pie(data);
+		</script>
+	{{/each}}
+</div>
+</template>

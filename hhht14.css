@@ -1,0 +1,83 @@
+/* CSS declarations go here */
+body{
+	background-color: #15CAB1;
+
+}
+.header{
+	background-color:#FF9999;
+	border-radius: 4px;
+
+}
+.centerText{
+	text-align: center;
+	font-family: Pacifico;
+	font-size: 4em;
+}
+
+@font-face{
+	font-family: Pacifico;
+	src: url(Pacifico.ttf);
+}
+
+.centerThat{
+	text-align: center !important;
+	display:block !important;
+	font-family: Pacifico;
+	
+}
+.twoEm{
+	font-size: 2em;
+}
+.paci{
+	font-family: Pacifico;
+	text-align: center;
+}
+
+.bigger{
+	font-size: 2em;
+}
+
+.questions{
+	font-family: Pacifico;
+	font-size: 2em;
+	text-align: center;
+}
+.myButton{
+  position: relative;
+  height: 100px;
+  text-align: center !important;
+}
+.ja{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	background-color: #70C13C;
+	text-align: center !important;
+	text-align: center !important;
+	line-height: 110px;
+	border-radius: 60px;
+	font-size: 3em;
+	font-family: Pacifico;
+	text-decoration: none;
+	color:black;
+}
+
+.nein{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	background-color: #FF614D;
+	text-align: center !important;
+	line-height: 110px;
+	border-radius: 60px;
+	font-size: 3em;
+	font-family: Pacifico;
+	text-decoration: none;
+	color:black;
+}
+
+.stati{
+	font-family: Pacifico;
+	font-size: 2em;
+	text-align: center;
+}
